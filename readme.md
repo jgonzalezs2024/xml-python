@@ -139,6 +139,8 @@ Podem recorrer o iterar una llista de etiquetes per extreure el contigut amb un 
 
 **XPath (XML Path Language)** és un llenguatge utilitzat per navegar i consultar documents XML. Proporciona una manera d'expressar ubicacions en documents XML per seleccionar nodes o conjunts de nodes específics.
 
+Mes info++ https://www.w3schools.com/xml/xpath_intro.asp
+
 Defineix 7 tipus de nodes possibles:
 
 - Node arrel
