@@ -102,7 +102,7 @@ Per validar documents XML amb un esquema **XSD**, es poden utilitzar eines com x
 
 El DOM (*Document Object Model*) és una representació jeràrquica d'un document XML o HTML que proporciona una interfície estructurada per accedir i manipular el contingut, l'estructura i l'estil del document. Bàsicament, és una forma estàndard de representar i manipular documents XML i HTML com una estructura d'arbre d'objectes, on cada node a l'arbre representa una part del document, com un element, un atribut o un text.
 
-https://docs.python.org/es/3.9/library/xml.dom.html
+Mes info++ https://docs.python.org/es/3.9/library/xml.dom.html
 
 ### Funcionament
 
