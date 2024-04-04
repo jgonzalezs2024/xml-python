@@ -102,6 +102,8 @@ Per validar documents XML amb un esquema **XSD**, es poden utilitzar eines com x
 
 El DOM (*Document Object Model*) és una representació jeràrquica d'un document XML o HTML que proporciona una interfície estructurada per accedir i manipular el contingut, l'estructura i l'estil del document. Bàsicament, és una forma estàndard de representar i manipular documents XML i HTML com una estructura d'arbre d'objectes, on cada node a l'arbre representa una part del document, com un element, un atribut o un text.
 
+https://docs.python.org/es/3.9/library/xml.dom.html
+
 ### Funcionament
 
 **DOM** és manipulat utilitzant biblioteques com ara **lxml** o **xml.dom**.
@@ -133,9 +135,131 @@ Podem recorrer o iterar una llista de etiquetes per extreure el contigut amb un 
 
 ![Captura de pantalla 2024-04-03 225500](https://github.com/jgonzalezs2024/xml-python/assets/165821294/57068f1a-ed00-4b7e-8cd6-6e30e405ccd7)
 
-## XSLT I XSLPATH
-
-**XSLT (Extensible Stylesheet Language Transformations)** és un llenguatge utilitzat per transformar documents XML en altres formats, com HTML o XHTML. Utilitza plantilles i regles per especificar com el contingut XML ha de ser processat i presentat.
+## XPATH I XSLT 
 
 **XPath (XML Path Language)** és un llenguatge utilitzat per navegar i consultar documents XML. Proporciona una manera d'expressar ubicacions en documents XML per seleccionar nodes o conjunts de nodes específics.
 
+Defineix 7 tipus de nodes possibles:
+
+- Node arrel
+- Elements
+- Atributs
+- Text
+- Espai de noms
+- Comentaris
+- Instruccions de processament
+
+Es basa en les següents regles:
+
+- Cada element i atribut té un **element pare**.
+- Cada element pot tenir **0, 1 o més fills**.
+- Els nodes amb el mateix pare són **germans**.
+
+Per seleccionar nodes específics:
+
+S'utilitzen **camins** per indicar la ubicació d'un element dins l'arbre XML.
+Els **predicats** s'utilitzen per buscar un node específic.
+
+Exemples de selecció de nodes inclouen:
+
+- **/ruta/element**: selecciona un element específic.
+- **//element[@atribut]**: selecciona elements amb un atribut específic.
+- **//element[@atribut='valor']**: selecciona elements amb un atribut amb un valor específic.
+- **//element[predicat]**: selecciona elements que compleixin certa condició.
+
+
+
+**XSLT (Extensible Stylesheet Language Transformations)** és un llenguatge utilitzat per transformar documents XML en altres formats, com HTML o XHTML. Utilitza plantilles i regles per especificar com el contingut XML ha de ser processat i presentat.
+
+### Funcionament
+
+**Capçelera del Document XSL**:
+
+S'inicia amb la seguent etiqueta:
+
+![image](https://github.com/jgonzalezs2024/xml-python/assets/165821294/adf35ceb-8bfb-484b-a4bf-5fcafbf14848)
+
+Es defineix la fulla d'estil amb:
+
+![image](https://github.com/jgonzalezs2024/xml-python/assets/165821294/e93970db-eea0-4efd-bf94-d913b48d6117)
+
+
+**Referenciar el Document XML**:
+
+Per vincular el document XML amb l'XSL s'utilitza la següent línia:
+
+![image](https://github.com/jgonzalezs2024/xml-python/assets/165821294/e492d294-f042-4ef1-8363-a06c5d2edd16)
+
+
+
+**Element xsl:template**:
+
+S'utilitza per crear plantilles. L'atribut **match** s'emplea per associar una plantilla a un element XML. La '/' ens diu que es per tot el document.
+
+![image](https://github.com/jgonzalezs2024/xml-python/assets/165821294/83669f75-a51f-4b09-a580-cbb3d67f96b4)
+
+**Element xsl:value-of**:
+
+Serveix per extreure el valor d'un node seleccionat i afegir-lo al resultat de la transformació. Aqui utilitzem rutes **XPath** per accedir al text de les etiquetes.
+
+![image](https://github.com/jgonzalezs2024/xml-python/assets/165821294/87f7641e-8c1b-4fad-a4a4-2157ae57d08b)
+
+
+**Element xsl:for-each**:
+
+Permet fer bucles en XSLT per seleccionar tots els elements XML d'un conjunt de nodes especificat. 
+
+![image](https://github.com/jgonzalezs2024/xml-python/assets/165821294/989cf29d-5731-4627-8d6d-6120b3e95290)
+
+**Operadors de comparació**:
+
+(=, !=, <, >) s'utilitzen per establir condicions de selecció de dades.
+
+*Igual*:
+
+![image](https://github.com/jgonzalezs2024/xml-python/assets/165821294/82804f8e-b85c-4434-9e19-272530dbd2b7)
+
+*Diferent*:
+
+![image](https://github.com/jgonzalezs2024/xml-python/assets/165821294/a0a90453-a05f-4d1c-b52d-4f3cdce9b6f3)
+
+*Menor*:
+
+![image](https://github.com/jgonzalezs2024/xml-python/assets/165821294/25603c85-4bc5-46b9-a96c-1c1c4a3cef3a)
+
+*Major*:
+
+![image](https://github.com/jgonzalezs2024/xml-python/assets/165821294/463d01c9-caeb-4377-b783-75cc2de5940e)
+
+**Element xsl:sort**:
+
+S'usa per ordenar la sortida de dades segons un criteri especificat. La opcio default es ascendent. Es pot ordenar per mes d'una etiqueta pero amb un ordre.
+
+![image](https://github.com/jgonzalezs2024/xml-python/assets/165821294/0a44b076-e842-4e66-82ac-5496e99a2a63)
+
+**Element xsl:if**:
+
+S'emplea per establir una condició sobre el contingut del fitxer XML.
+
+![image](https://github.com/jgonzalezs2024/xml-python/assets/165821294/63efd6cc-a7b5-4786-ac1c-1c00ad865fa2)
+
+
+**Element xsl:choose**:
+
+S'utilitza juntament amb xsl:when i xsl:otherwise per aplicar condicions múltiples.
+
+![image](https://github.com/jgonzalezs2024/xml-python/assets/165821294/f918dbb3-19ca-4bb3-b5ae-0df1d017329e)
+
+**Element xsl:apply-templates**:
+
+El element xsl:apply-templates s'utilitza per aplicar les plantilles definides en l'XSLT al contingut seleccionat del document XML.
+
+![image](https://github.com/jgonzalezs2024/xml-python/assets/165821294/c0f1a9a7-1475-477f-b45c-f76be601fe7e)
+
+**Enllaços i Imatges**:
+
+Es poden afegir enllaços i imatges utilitzant <a> i <img>, juntament amb xsl:attribute per establir els atributs com href i src.
+
+![image](https://github.com/jgonzalezs2024/xml-python/assets/165821294/45e8a69a-3f07-4b89-a9f7-dfa6cdf6a6a8)
+
+![image](https://github.com/jgonzalezs2024/xml-python/assets/165821294/e9c0629a-6884-43d1-9e69-5b8fa8d7a458)
