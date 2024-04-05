@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="dibuix.xsl"?>
+<dibuix>
+    <canvas>
+        <amplada>400</amplada>
+        <alçada>400</alçada>
+    </canvas>
+    <figures>
+        <figura tipus="rectangle" color="grey">
+            <posicio>
+                <x>0</x>
+                <y>0</y>
+                <stroke>black</stroke>
+            </posicio>
+            <dimensions>
+                <amplada>100</amplada>
+                <alçada>100</alçada>
+            </dimensions>
+        </figura>
+        <figura tipus="rectangle" color="grey">
+            <posicio>
+                <x>100</x>
+                <y>100</y>
+                <stroke>black</stroke>
+            </posicio>
+            <dimensions>
+                <amplada>100</amplada>
+                <alçada>100</alçada>
+            </dimensions>
+        </figura>
+        <figura tipus="rectangle" color="grey">
+            <posicio>
+                <x>0</x>
+                <y>200</y>
+                <stroke>black</stroke>
+            </posicio>
+            <dimensions>
+                <amplada>100</amplada>
+                <alçada>100</alçada>
+            </dimensions>
+        </figura>
+        <figura tipus="rectangle" color="grey">
+            <posicio>
+                <x>100</x>
+                <y>300</y>
+                <stroke>black</stroke>
+            </posicio>
+            <dimensions>
+                <amplada>100</amplada>
+                <alçada>100</alçada>
+            </dimensions>
+        </figura>
+
+        <figura tipus="rectangle" color="grey">
+            <posicio>
+                <x>200</x>
+                <y>0</y>
+                <stroke>black</stroke>
+            </posicio>
+            <dimensions>
+                <amplada>100</amplada>
+                <alçada>100</alçada>
+            </dimensions>
+        </figura>
+        <figura tipus="rectangle" color="grey">
+            <posicio>
+                <x>300</x>
+                <y>100</y>
+                <stroke>black</stroke>
+            </posicio>
+            <dimensions>
+                <amplada>100</amplada>
+                <alçada>100</alçada>
+            </dimensions>
+        </figura>
+        <figura tipus="rectangle" color="grey">
+            <posicio>
+                <x>200</x>
+                <y>200</y>
+                <stroke>black</stroke>
+            </posicio>
+            <dimensions>
+                <amplada>100</amplada>
+                <alçada>100</alçada>
+            </dimensions>
+        </figura>
+        <figura tipus="rectangle" color="grey">
+            <posicio>
+                <x>300</x>
+                <y>300</y>
+                <stroke>black</stroke>
+            </posicio>
+            <dimensions>
+                <amplada>100</amplada>
+                <alçada>100</alçada>
+            </dimensions>
+        </figura>
+        <figura tipus="cercle" color="black">
+            <posicio>
+                <cx>200</cx>
+                <cy>200</cy>
+                <r>50</r>
+                <stroke>black</stroke>
+            </posicio>
+            <dimensions>
+                <amplada>100</amplada>
+                <alçada>100</alçada>
+            </dimensions>
+        </figura>
+        <figura tipus="ellipse" color="pink">
+            <posicio>
+                <rx>25</rx>
+                <ry>50</ry>
+                <cx>200</cx>
+                <cy>200</cy>
+                <stroke>black</stroke>
+            </posicio>
+            <dimensions>
+                <amplada>50</amplada>
+                <alçada>100</alçada>
+            </dimensions>
+        </figura>
+        <figura tipus="text" color="black">
+            <posicio>
+                <x>40</x>
+                <y>100</y>
+                <fill>black</fill>
+                <stroke>pink</stroke>
+                <size>100</size>
+            </posicio>
+            <dimensions>
+                <amplada>50</amplada>
+                <alçada>100</alçada>
+            </dimensions>
+        </figura>
+    </figures>
+</dibuix>
